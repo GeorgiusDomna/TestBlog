@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Приложение для поиска репозиториев на GitHub
+### React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это тестовое веб-приложение для отображения списка постов с возможностью поиска и просмотра отдельных постов. Данные получаются с внешнего API (https://jsonplaceholder.typicode.com/).
 
-Currently, two official plugins are available:
+Функционал:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Отображение списка всех постов.
 
-## Expanding the ESLint configuration
+- Фильтрация через поиск — серверная. Совпадение по полному названию поста.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Просмотр отдельного поста: Вы можете просмотреть содержимое конкретного поста, включая изображение, заголовок, текст и реакции.
 
-- Configure the top-level `parserOptions` property like this:
+- Реакции на посты: Можно оставлять реакции на посты и они отображаются как на главной странице, так и на странице поста.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+
+## Для запуска приложения следуйте приведенным ниже шагам:
+
+ - Шаг 1: Клонируйте репозиторий на свой компьютер:
+
+```bash
+  git@github.com:GeorgiusDomna/TestBlog.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+ - Шаг 2: Перейдите в каталог скачанного репозитория и выполните команду установки зависимостей:
+```bash
+  cd <путь-к-репозиторию>
+  npm install
+```
+
+ - Шаг 4: После успешной установки зависимостей, выполните команду для запуска приложения. Откройте браузер и перейдите по адресу, указанному в консоли.
+```bash
+  npm run dev
+```
+
+Или воспользуйтесь готовым deploy Vercel: https://test-blog-henna-two.vercel.app/
