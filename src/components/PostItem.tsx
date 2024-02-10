@@ -1,17 +1,12 @@
-import { getPostsItem } from "../api/documentService"
 import { IPost } from "../interfaces/IPost"
 import ReactionBlock from "./ReactionBlock"
 
 interface IPostItemProps {
-  postData: IPost
-  toggleReact: (id: number, type: "like" | "dislike") => void
+  postData: IPost;
+  toggleReact: (id: number, type: "like" | "dislike") => void;
+  setOpenPost: React.Dispatch<React.SetStateAction<number | null>>
 }
-const PostItem: React.FC<IPostItemProps> = ({postData, toggleReact}) => {
-
-  const readMoreHandler = async(id: number) => {
-    const res = await getPostsItem(id);
-    res && console.log(res);
-  }
+const PostItem: React.FC<IPostItemProps> = ({postData, toggleReact, setOpenPost}) => {
 
   return (
     <div className='postItem'>
@@ -20,7 +15,7 @@ const PostItem: React.FC<IPostItemProps> = ({postData, toggleReact}) => {
         <h2>{postData.title}</h2>
         <div className="interactions">
           <ReactionBlock reaction={postData.reaction} id={postData.id} toggleReact={toggleReact} />
-          <button onClick={() => readMoreHandler(postData.id)} className="readeMore">Читать далее</button>
+          <button onClick={() => setOpenPost(postData.id)} className="readeMore">Читать далее</button>
         </div>
       </div>
     </div>

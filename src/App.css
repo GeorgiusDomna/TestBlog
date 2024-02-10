@@ -18,13 +18,28 @@ header h1 {
 header p {
   font-size: 24px;
 }
-#inpSearch {
-  width: 100%;
+.input-group {
   margin: 32px 0;
+  position: relative;
+}
+.input-group input {
+  width: 100%;
   padding: 12px 46px;
   border-radius: 6px;
 }
-
+.input-group .icon {
+  display: flex;
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+.input-group img {
+  opacity: 0.7;
+}
 
 .postList {
   column-count: 2;
@@ -44,22 +59,26 @@ header p {
 .postItem_info {
   padding: 0 16px 32px;
 }
-.interactions {
+.interactions,
+.firstItem .headerPost {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.firstItem .interactions {
+  justify-content: right;
 }
 .interactions_reaction {
   display: flex;
   align-items: center;
 }
 .reaction {
-  margin-right: 10px;
-  align-items: center;
-  border: none;
   width: 25px;
   height: 25px;
+  margin-right: 10px;
   cursor: pointer;
+  align-items: center;
+  border: none;
   background-color: #ffffff;
   background-size: 25px;
   background-repeat: no-repeat;
@@ -69,8 +88,8 @@ header p {
   opacity: 0.8;
 }
 .dislike {
-  background-image: url(./assets/Dislike.svg);
   margin-left: 24px;
+  background-image: url(./assets/Dislike.svg);
 }
 .like {
   background-image: url(./assets/Like.svg);
@@ -91,6 +110,35 @@ header p {
 .readeMore:hover {
   opacity: 0.6;
 }
+
+
+.openPost header {
+  display: flex;
+  justify-content: space-between;
+}
+.goBack {
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: 0.2s;
+}
+.goBack:hover {
+  opacity: 0.7;
+}
+.goBack img {
+  margin-right: 5px;
+}
+.openPost h2 {
+  text-align: center;
+}
+.openPost_content {
+  padding: 0 146px;
+}
+.openPost_content img {
+  width: 100%;
+}
+
 
 @media (max-width: 850px) {
   .App {
