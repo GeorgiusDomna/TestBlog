@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+  background: #E5E5E5;
+  font-family: 'Roboto', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.App {
+  max-width: 1400px;
+  padding: 64px 130px;
+  margin: auto;
+  background: #ffffff
+}
+header h1 {
+  text-align: center;
+}
+header p {
+  font-size: 24px;
+}
+#inpSearch {
+  width: 100%;
+  margin: 32px 0;
+  padding: 12px 46px;
+  border-radius: 6px;
+}
+
+
+.postList {
+  column-count: 2;
+  column-gap: 24px;
+}
+.postItem {
+  break-inside: avoid;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(112, 112, 112);
+}
+.postItem img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+.postItem_info {
+  padding: 0 16px 32px;
+}
+.interactions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.interactions_reaction {
+  display: flex;
+  align-items: center;
+}
+.reaction {
+  margin-right: 10px;
+  align-items: center;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #ffffff;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+.reaction:hover {
+  opacity: 0.8;
+}
+.dislike {
+  background-image: url(./assets/Dislike.svg);
+  margin-left: 24px;
+}
+.like {
+  background-image: url(./assets/Like.svg);
+}
+.like-active {
+  background-image: url(./assets/Like-active.svg);
+}
+.dislike-active {
+  background-image: url(./assets/Dislike-active.svg);
+}
+.readeMore {
+  padding: 14px 24px;
+  border-radius: 60px;
+  cursor: pointer;
+  background: #ffffff;
+  transition: 0.2s;
+}
+.readeMore:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 850px) {
+  .App {
+    padding: 20px 30px;
+  }
+  .postList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
