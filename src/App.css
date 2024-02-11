@@ -148,4 +148,7 @@ header p {
     display: flex;
     flex-wrap: wrap;
   }
+  .openPost_content {
+  padding: 0 20px;
+  }
 }
